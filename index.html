@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ethical Hacking — Start Here</title>
+<style>
+  :root{
+    --bg:#0f1220; --card:#181c2f; --card2:#1f2438; --text:#e7e9f3;
+    --muted:#a6accd; --accent:#7c5cff; --accent2:#22d3ee; --ok:#34d399;
+    --line:#2a3050;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; padding:32px 16px;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif;
+    background:radial-gradient(1200px 600px at 20% -10%,#241b4d 0%,var(--bg) 55%);
+    color:var(--text); line-height:1.65;
+  }
+  .wrap{max-width:900px;margin:0 auto}
+  header{
+    background:linear-gradient(135deg,rgba(124,92,255,.22),rgba(34,211,238,.12));
+    border:1px solid var(--line); border-radius:18px; padding:28px 26px; margin-bottom:24px;
+  }
+  h1{margin:0 0 8px;font-size:clamp(1.6rem,4vw,2.3rem);letter-spacing:-.02em}
+  .sub{color:var(--muted);margin:0}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;
+    font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;
+    border-radius:999px;margin-bottom:14px}
+  section{background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin:18px 0}
+  h2{margin:0 0 14px;font-size:1.25rem;display:flex;align-items:center;gap:10px}
+  h2 .n{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:9px;
+    background:linear-gradient(135deg,var(--accent),var(--accent2));color:#0b0e18;
+    font-size:.85rem;font-weight:800}
+  h3{margin:22px 0 8px;font-size:1.05rem;color:#fff}
+  p{margin:8px 0}
+  a{color:var(--accent2);text-decoration:none;border-bottom:1px solid rgba(34,211,238,.35)}
+  a:hover{color:#fff;border-bottom-color:#fff}
+  ul,ol{margin:8px 0 8px 22px;padding:0}
+  li{margin:6px 0}
+  code{background:#0b0e18;border:1px solid var(--line);padding:2px 6px;border-radius:6px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em;color:#c9d1ff}
+  pre{background:#0b0e18;border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+    overflow:auto;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.9rem;color:#c9d1ff}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.95rem}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--muted);font-weight:600;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+  tr:last-child td{border-bottom:none}
+  .card{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:12px 0}
+  .card b{color:#fff}
+  .tag{font-size:.75rem;color:#0b0e18;background:var(--accent2);padding:2px 8px;border-radius:999px;font-weight:700}
+  .rule{border-left:3px solid var(--accent);padding-left:14px;margin:10px 0;color:#d9dcf0}
+  .check li{list-style:none;margin-left:-18px}
+  .check li::before{content:"☐ ";color:var(--accent2);font-size:1.1em}
+  .quote{border-left:3px solid var(--accent2);background:rgba(34,211,238,.06);
+    padding:12px 16px;border-radius:0 10px 10px 0;font-style:italic;color:#dfe3f5}
+  footer{color:var(--muted);text-align:center;font-size:.85rem;margin:28px 0 8px}
+  @media print{
+    body{background:#fff;color:#111;padding:0}
+    section,header,.card{background:#fff;border:1px solid #ddd;box-shadow:none}
+    h1,h2,h3,.card b{color:#111}
+    a{color:#0645ad}
+    code,pre{background:#f4f4f4;color:#111;border-color:#ddd}
+    .badge{background:#eee;color:#111}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="badge">Start Here</div>
+  <h1>Ethical Hacking — Your Roadmap</h1>
+  <p class="sub">Free · Beginner level · 2 hours a day · Updated 20 Nov 2026</p>
+</header>
+
+<section>
+  <h2><span class="n">1</span> Ground Rules</h2>
+  <div class="rule"><b>Only test systems you own or have written permission to test.</b> Your own lab is safe. Anything else is illegal.</div>
+  <div class="rule"><b>Never skip the basics.</b> Tools change; understanding does not.</div>
+  <div class="rule"><b>Type every command yourself.</b> Watching is not learning.</div>
+  <div class="rule"><b>Write things down.</b> One line: “command → what it did.”</div>
+  <div class="rule"><b>Consistency beats intensity.</b> 2 focused hours daily &gt; 10 hours once a week.</div>
+  <div class="rule"><b>Stuck for more than 20 minutes? Ask.</b> Don’t lose a whole day.</div>
+</section>
+
+<section>
+  <h2><span class="n">2</span> Daily 2-Hour Routine</h2>
+  <table>
+    <tr><th>Time</th><th>What to do</th></tr>
+    <tr><td>0:00 – 0:15</td><td>Review yesterday’s notes</td></tr>
+    <tr><td>0:15 – 0:55</td><td>Watch / read <b>one</b> topic</td></tr>
+    <tr><td>0:55 – 1:45</td><td>Hands-on: type every command, break things safely</td></tr>
+    <tr><td>1:45 – 2:00</td><td>Write notes: what I learned + what confused me</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">3</span> The Learning Path — in this order</h2>
+
+  <h3><span class="tag">Stage 1</span> Terminal &amp; Linux — START HERE</h3>
+  <div class="card">
+    <b>NetworkChuck — “Linux for Hackers (and everyone) // FREE Course for Beginners”</b><br>
+    <a href="https://www.youtube.com/playlist?list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL" target="_blank" rel="noopener">
+      Open the playlist →</a>
+    <p>Beginner-friendly and made for your exact level. Covers the terminal, files, users, <code>sudo</code>, packages, processes.
+    <b>Plan: 2–3 weeks.</b> One video per session, then practice.</p>
+  </div>
+  <p>Quick reference when you forget a command:
+    <a href="https://www.youtube.com/watch?v=ZtqBQ68cfJc" target="_blank" rel="noopener">freeCodeCamp — The 50 Most Popular Linux &amp; Terminal Commands</a>
+  </p>
+
+  <h3><span class="tag">Stage 2</span> Networking</h3>
+  <div class="card">
+    <b>Professor Messer — CompTIA N10-009 Network+ Training Course</b><br>
+    <a href="https://www.youtube.com/playlist?list=PLG49S3nxzAnl_tQe3kvnmeMid0mjF8Le8" target="_blank" rel="noopener">
+      Open the playlist →</a>
+    <p>Free and complete. You do <b>NOT</b> need all 90 videos or the exam.
+    Watch only: IP addressing, ports &amp; protocols, TCP vs UDP, DNS, HTTP, routing.</p>
+  </div>
+
+  <h3><span class="tag">Stage 3</span> Ethical Hacking — the big picture</h3>
+  <div class="card">
+    <b>Ethical Hacking Full Course for Beginners — 2025 Edition (WsCube Cyber Security)</b><br>
+    <a href="https://www.youtube.com/playlist?list=PLwO5-rumi8A4J7h4Fm92TEC00gfZUk7ls" target="_blank" rel="noopener">
+      Open the playlist →</a>
+    <p>71 videos from zero: recon → scanning → exploitation → web hacking. Watch after Stages 1 and 2.</p>
+  </div>
+  <div class="card">
+    <b>Alternative (more advanced): The Cyber Mentor — Full-Length Hacking Courses</b><br>
+    <a href="https://www.youtube.com/playlist?list=PLLKT__MCUeixqHJ1TRqrHsEd6_EdEvo47" target="_blank" rel="noopener">
+      Open the playlist →</a>
+  </div>
+
+  <h3><span class="tag">Stage 4</span> Practice — where real learning happens</h3>
+  <ul>
+    <li><a href="https://tryhackme.com" target="_blank" rel="noopener">TryHackMe</a> — free beginner rooms</li>
+    <li><a href="https://portswigger.net/web-security" target="_blank" rel="noopener">PortSwigger Web Security Academy</a> — free web hacking labs</li>
+    <li><a href="https://overthewire.org/wargames/bandit/" target="_blank" rel="noopener">OverTheWire Bandit</a> — free Linux game</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">4</span> Absolute Basics — The Terminal</h2>
+
+  <h3>What is a terminal?</h3>
+  <p>A text window where you talk to the computer by typing <b>commands</b> instead of clicking.
+  Open it with <code>Ctrl + Alt + T</code>.</p>
+
+  <p>You will see something like:</p>
+  <pre>┌──(dan㉿kali)-[~]
+└─$</pre>
+  <ul>
+    <li><code>dan</code> — your username</li>
+    <li><code>kali</code> — computer name</li>
+    <li><code>~</code> — your home folder (<code>/home/dan</code>)</li>
+    <li><code>$</code> — ready for a command (<code>#</code> means root)</li>
+  </ul>
+
+  <h3>Anatomy of a command</h3>
+  <pre>command   -options   target
+   │          │        │
+   │          │        └── what to act on
+   │          └────────── how to do it (starts with -)
+   └───────────────────── what program to run</pre>
+  <p>Example: <code>ls -l /home</code></p>
+
+  <h3>Your first 4 commands</h3>
+  <table>
+    <tr><th>Command</th><th>Meaning</th><th>Example</th></tr>
+    <tr><td><code>pwd</code></td><td>Print Working Directory — where am I?</td><td><code>pwd</code></td></tr>
+    <tr><td><code>ls</code></td><td>List — what is in this folder?</td><td><code>ls</code></td></tr>
+    <tr><td><code>cd</code></td><td>Change Directory — go somewhere</td><td><code>cd Downloads</code></td></tr>
+    <tr><td><code>clear</code></td><td>Clear the screen</td><td><code>clear</code></td></tr>
+  </table>
+  <ul>
+    <li><code>cd ..</code> — go up one folder</li>
+    <li><code>cd</code> (alone) — go home</li>
+    <li><code>~</code> — home folder</li>
+  </ul>
+
+  <h3>Superpowers</h3>
+  <ul>
+    <li><b>Tab</b> — auto-complete a file or folder name</li>
+    <li><b>↑ / ↓</b> — previous / next command</li>
+    <li><code>command --help</code> — quick help</li>
+    <li><code>man command</code> — full manual (<code>q</code> to quit)</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">5</span> First Week Checklist</h2>
+  <ul class="check">
+    <li>Open the terminal with <code>Ctrl + Alt + T</code></li>
+    <li>Run <code>pwd</code> and understand the output</li>
+    <li>Run <code>ls</code> and see your folders</li>
+    <li>Move into a folder with <code>cd</code>, then back with <code>cd ..</code></li>
+    <li>Use <b>Tab</b> to auto-complete a name</li>
+    <li>Use <b>↑</b> to bring back an old command</li>
+    <li>Watch NetworkChuck Episode 1 and type everything</li>
+    <li>Write 5 lines of notes</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="n">6</span> Glossary — plain English</h2>
+  <table>
+    <tr><th>Word</th><th>Meaning</th></tr>
+    <tr><td>Terminal</td><td>Text window for typing commands</td></tr>
+    <tr><td>Command</td><td>An instruction you type and press Enter</td></tr>
+    <tr><td>Directory</td><td>Another word for folder</td></tr>
+    <tr><td>Path</td><td>The address of a file or folder, like <code>/home/dan/Downloads</code></td></tr>
+    <tr><td><code>~</code></td><td>Shortcut for your home folder</td></tr>
+    <tr><td>Root</td><td>The administrator account with full power</td></tr>
+    <tr><td>IP address</td><td>The address of a machine on a network</td></tr>
+    <tr><td>Port</td><td>A numbered “door” on a machine for a specific service</td></tr>
+    <tr><td>Protocol</td><td>The agreed rules for how two machines talk</td></tr>
+    <tr><td>TCP</td><td>Reliable connection (like a phone call)</td></tr>
+    <tr><td>UDP</td><td>Fast, no guarantee (like a postcard)</td></tr>
+    <tr><td>Service</td><td>A program listening on a port, waiting for connections</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2><span class="n">7</span> How to Use Your Tutor</h2>
+  <p>I teach step by step and never assume you know something. Good ways to ask:</p>
+  <ul>
+    <li>“Explain what <code>cd</code> does like I’m completely new.”</li>
+    <li>“I ran this command and got this error: <i>paste it</i>”</li>
+    <li>“Quiz me on what I learned today.”</li>
+    <li>“What should I do in today’s 2 hours?”</li>
+    <li>“I don’t understand this video — explain it simply.”</li>
+  </ul>
+  <div class="card">
+    <b>My rules for you:</b> no jargon without explaining it first · one step at a time ·
+    if I skip an explanation, call me out.
+  </div>
+</section>
+
+<section>
+  <h2><span class="n">8</span> Progress Tracker</h2>
+  <h3>Stage 1 — Linux</h3>
+  <ul class="check">
+    <li>Episode 1</li><li>Episode 2</li><li>Episode 3</li>
+    <li>Episode 4</li><li>Episode 5</li><li>Finished Stage 1</li>
+  </ul>
+  <h3>Stage 2 — Networking</h3>
+  <ul class="check">
+    <li>IP addresses</li><li>Ports &amp; protocols</li><li>TCP vs UDP</li>
+    <li>DNS</li><li>HTTP</li><li>Finished Stage 2</li>
+  </ul>
+  <h3>Stage 3 — Ethical Hacking</h3>
+  <ul class="check">
+    <li>Started the full course</li><li>Finished the full course</li>
+  </ul>
+  <h3>Stage 4 — Practice</h3>
+  <ul class="check">
+    <li>First TryHackMe room</li><li>First PortSwigger lab</li><li>Bandit levels 0–10</li>
+  </ul>
+</section>
+
+<div class="quote">
+  Learn how things work → learn how they break → practice safely → write it down.
+</div>
+
+<footer>
+  You don’t need money. You need consistency. See you at 2 hours today.
+</footer>
+
+</div>
+</body>
+</html>
